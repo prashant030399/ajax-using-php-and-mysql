@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+        <html>
+        <head>
+            <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+
+<div style="background-color:pink; width:100%; height:800px;">
+<h2>ajax using php and mysql - employee database by Prashant   </h2>
+ Enter Employee ID<input type ="text" id="t1"><br>
+ Enter Employee Name<input type ="text" id= "t2"><br>
+ Enter Employee Marks<input type ="text" id="t3"><br>
+
+ <button id="b1">Save</button>
+
+ </div>
+
+<script>
+$(document).ready( function(){
+$("#b1").click( function(){
+ var a = $("#t1").val();
+ var b= $("#t2").val();
+var c =$("#t3").val();
+
+$.post("employeedatabase.php" , {t1:a, t2:b, t3:c  }, function(data){
+alert(data);
+});
+
+});
+
+});
+
+
+</script>
+
+
+
+</body>
