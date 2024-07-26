@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+        <html>
+        <head>
+            <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+
+<div style="background-color:blue ; color:white">
+<h2>AJAX using PHP and MySQL - Customer database by Prashant   </h2>
+
+ Enter ID<input type ="text" id="t1"><br>
+ Enter Name<input type ="text" id= "t2"><br>
+ Enter Email<input type ="text" id="t3"><br>
+  Enter Contact No.<input type ="text" id="t4"><br>
+ Enter Address<input type ="text" id= "t5"><br>
+ Enter Requirement<input type ="text" id="t6"><br>
+
+ <button id="b1">Save</button>
+
+ </div>
+
+<script>
+$(document).ready( function(){
+$("#b1").click( function(){
+ var a = $("#t1").val();
+ var b= $("#t2").val();
+var c =$("#t3").val();
+ var d = $("#t4").val();
+ var e= $("#t5").val();
+var f =$("#t6").val();
+
+$.post("customerdatabase.php" , {t1:a, t2:b, t3:c,t4:d,t5:e,t6:f  }, function(data){
+alert(data);
+});
+
+});
+
+});
+
+
+</script>
+
+
+
+</body>
